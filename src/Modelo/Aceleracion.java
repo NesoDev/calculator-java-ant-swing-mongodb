@@ -4,16 +4,12 @@
  */
 package Modelo;
 
-/**
- *
- * @author ...
- */
 public class Aceleracion extends Magnitud {
     // constructor
     public Aceleracion(String nombre, String unidad, float valor) {
         super(nombre, unidad, valor);
     }
-
+    
     // metodo para calcular la aceleracion utilizando la forma 1
     public float calcularForma1(float vi, float vf, float t) {
         return (vf - vi) / t;

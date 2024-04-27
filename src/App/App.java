@@ -1,22 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package App;
-import Vista.VistaLogin;
 
-/**
- *
- * @author ...
- */
+// importamos las vistas
+import Vista.VistaLogin;
+import Vista.VistaCalculadora;
+import Vista.VistaEncuesta;
+
+// importamos los controladores
+import Controlador.ControladorLogin;
+import Controlador.ControladorCalculadora;
+import Controlador.ControladorEncuesta;
+
+// importamos los modelos
+import Modelo.Sesion;
+import Modelo.ConexionBD;
 
 public class App {
-
+    
+    // constuctor
     public static void main(String[] args) {
-        // creamos una instancia de VistCalculadora
-        VistaLogin vista = new VistaLogin();
+        // creamos una instancia sesion
+        Sesion sesion = new Sesion();
+        ConexionBD conexion = new ConexionBD();
         
-        // hacemos visible a vistaCalculadora
-        vista.setVisible(true);
+        // creamos instancias de las vistas
+        VistaLogin vLogin = new VistaLogin();
+        VistaCalculadora vCalculadora = new VistaCalculadora();
+        VistaEncuesta vEncuesta = new VistaEncuesta();
+        
+        // creamos instancias de los controladores
+        ControladorLogin cLogin = new ControladorLogin(sesion, vLogin);
+        ControladorCalculadora cCalculadora = new ControladorCalculadora(vCalculadora);
+        ControladorEncuesta cEncuesta = new ControladorEncuesta(vEncuesta);
+        
+        // hacemos visible la vista login
+        vLogin.setVisible(true);
     }
 }

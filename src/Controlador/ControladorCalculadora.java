@@ -1,27 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.VistaCalculadora;
+
+// importamos modelos
 import Modelo.VelocidadInicial;
 import Modelo.VelocidadFinal;
 import Modelo.Tiempo;
 import Modelo.Recorrido;
 import Modelo.Aceleracion;
 import Modelo.Magnitud;
+
+// importamos estructuras de datos
 import java.util.ArrayList;
 import java.util.Collection;
 
-/**
- *
- * @author ...
- */
 public class ControladorCalculadora implements ActionListener {
     // atributos
+    private VistaCalculadora vista;
     private VelocidadInicial vtInicial;
     private VelocidadFinal vtFinal;
     private Tiempo tiempo;
@@ -31,14 +28,13 @@ public class ControladorCalculadora implements ActionListener {
     private VelocidadFinal wFinal;
     private Aceleracion aceleracionAngular;
     private Recorrido anguloRecorrido;
-    private VistaCalculadora vista;
     private ArrayList<Magnitud> magnitudesIncognitas = new ArrayList<>();
     private ArrayList<Magnitud> magnitudesConocidas = new ArrayList<>();
     
     // constructor
     public ControladorCalculadora(VistaCalculadora vista) {
+        // iniciamos los atributos
         this.vista = vista;
-        // intanciamos las magnitudes
         this.vtInicial = new VelocidadInicial("Velocidad Tangencial Inicial", "m/s", 0);
         this.vtFinal = new VelocidadFinal("Velocidad Tangencial Final", "m/s", 0);
         this.tiempo = new Tiempo("Tiempo", "s", 0);
@@ -48,13 +44,13 @@ public class ControladorCalculadora implements ActionListener {
         this.wFinal = new VelocidadFinal("Velocidad Angular Final", "rad/s", 0);
         this.aceleracionAngular = new Aceleracion("Aceleración Angular", "rad/s^2", 0);
         this.anguloRecorrido = new Recorrido("Ángulo Recorrido", "rad", 0);
-
-        // agregamos el controlador al boton  'Calcular'
-        vista.getBotonCalcular().addActionListener(this);
     }
     
-    
     // metodos
+    public VistaCalculadora getVista() {
+        return this.vista;
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.getBotonCalcular()) {

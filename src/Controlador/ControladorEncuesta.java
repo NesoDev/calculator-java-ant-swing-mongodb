@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Controlador;
 
-/**
- *
- * @author ...
- */
+// importamos las vistas
+import Vista.VistaEncuesta;
+
 public class ControladorEncuesta {
+    private VistaEncuesta vista;
     
+    // constructor
+    public ControladorEncuesta(VistaEncuesta vista) {
+        this.vista = vista;
+    }
 }

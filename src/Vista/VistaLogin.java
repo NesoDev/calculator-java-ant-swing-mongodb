@@ -1,13 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
-/**
- *
- * @author Ever
- */
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 public class VistaLogin extends javax.swing.JFrame {
 
     /**
@@ -25,7 +21,7 @@ public class VistaLogin extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        setTitle("Login");
+
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -53,9 +49,9 @@ public class VistaLogin extends javax.swing.JFrame {
         entradaUsuario.setBackground(new java.awt.Color(216, 217, 253));
         entradaUsuario.setFont(new java.awt.Font("Leelawadee UI", 1, 16)); // NOI18N
         entradaUsuario.setForeground(new java.awt.Color(101, 98, 177));
-        entradaUsuario.setText("   Usuario");
         entradaUsuario.setBorder(null);
         entradaUsuario.setCaretColor(new java.awt.Color(101, 98, 177));
+        entradaUsuario.setMargin(new java.awt.Insets(2, 20, 2, 6));
         entradaUsuario.setMinimumSize(new java.awt.Dimension(19, 28));
         entradaUsuario.setPreferredSize(new java.awt.Dimension(94, 28));
         entradaUsuario.setSelectedTextColor(new java.awt.Color(101, 98, 177));
@@ -69,7 +65,6 @@ public class VistaLogin extends javax.swing.JFrame {
         entradaContrasenia.setBackground(new java.awt.Color(216, 217, 253));
         entradaContrasenia.setFont(new java.awt.Font("Leelawadee UI", 1, 16)); // NOI18N
         entradaContrasenia.setForeground(new java.awt.Color(101, 98, 177));
-        entradaContrasenia.setText("   Contraseña");
         entradaContrasenia.setBorder(null);
         entradaContrasenia.setCaretColor(new java.awt.Color(101, 98, 177));
         entradaContrasenia.setMargin(new java.awt.Insets(2, 10, 2, 6));
@@ -107,45 +102,48 @@ public class VistaLogin extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(100, 100, 100))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(botonIniciarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonReestablecerContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(0, 0, 0)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(entradaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(entradaContrasenia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(botonReestablecerContrasenia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(labelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(entradaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(entradaContrasenia))))
                 .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(91, 91, 91))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(19, 19, 19)
                 .addComponent(jLabel2)
-                .addGap(25, 25, 25)
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(entradaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(entradaContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(entradaContrasenia))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonReestablecerContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                .addGap(12, 12, 12))
+                .addComponent(labelResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -156,27 +154,27 @@ public class VistaLogin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void entradaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaUsuarioActionPerformed
+    private void botonReestablecerContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReestablecerContraseniaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_entradaUsuarioActionPerformed
-
-    private void entradaContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaContraseniaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_entradaContraseniaActionPerformed
+    }//GEN-LAST:event_botonReestablecerContraseniaActionPerformed
 
     private void botonIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIniciarSesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonIniciarSesionActionPerformed
 
-    private void botonReestablecerContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonReestablecerContraseniaActionPerformed
+    private void entradaContraseniaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaContraseniaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonReestablecerContraseniaActionPerformed
+    }//GEN-LAST:event_entradaContraseniaActionPerformed
+
+    private void entradaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entradaUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_entradaUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,4 +225,28 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelResultado;
     // End of variables declaration//GEN-END:variables
+    
+    public JTextField getEntradaContrasenia() {
+        return entradaContrasenia;
+    }
+
+    public JTextField getEntradaUsuario() {
+        return entradaUsuario;
+    }
+    
+    public javax.swing.JButton getBotonIniciarSesion() {
+        return this.botonIniciarSesion;
+    }
+
+    public JButton getBotonReestablecerContrasenia() {
+        return botonReestablecerContrasenia;
+    }
+
+    public JLabel getLabelResultado() {
+        return labelResultado;
+    }
+
+    public void cerrarVentana() {
+        this.dispose();
+    }
 }
